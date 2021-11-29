@@ -1,15 +1,20 @@
 <template>
-  <hello-world />
+  <v-container fluid>
+    <carousel />
+    <products />
+  </v-container>
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld";
+import Carousel from "../components/Carousel";
+import Products from "./Products";
 
 export default {
   name: "Home",
 
   components: {
-    HelloWorld,
+    Carousel,
+    Products,
   },
 };
 </script>

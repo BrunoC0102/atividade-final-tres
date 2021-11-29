@@ -1,11 +1,11 @@
 <template>
-  <v-app>
-    <v-app-bar app color="#000000" fixed elevation="4" dark>
-      <v-app-bar-nav-icon @click="drawer = true"> </v-app-bar-nav-icon>
-      <v-toolbar-title>Atividade final 2</v-toolbar-title>
-    </v-app-bar>
+  <v-app id="app">
+    <ToolBar
+      :openDrawer="openDrawer"
+      v-bind:title="'Atividade final 2 - ' + titleText"
+    />
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
@@ -16,6 +16,13 @@
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Home</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="/products">
+            <v-list-item-icon>
+              <v-icon>mdi-basket</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Produtos</v-list-item-title>
           </v-list-item>
 
           <v-list-item href="/about">
@@ -42,12 +49,30 @@
 </template>
 
 <script>
+import ToolBar from "./components/Toolbar";
 export default {
   name: "App",
 
-  data: () => ({
-    drawer: false,
-    group: null,
-  }),
+  components: {
+    ToolBar,
+  },
+  data() {
+    return {
+      drawer: false,
+      group: null,
+      titleText: this.$store.state.title,
+    };
+  },
+  methods: {
+    openDrawer() {
+      this.drawer = true;
+    },
+  },
 };
 </script>
+
+<style>
+#app {
+  background-color: #222222;
+}
+</style>
