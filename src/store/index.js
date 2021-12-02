@@ -1,11 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    title: "AF2",
+    title: "af2",
     products: [
       {
         id: 1,
@@ -94,8 +95,32 @@ export default new Vuex.Store({
         src: require("@/assets/images/carousel/pizza-portuguesa.jpg"),
       },
     ],
+    dogsBreeds: [],
   },
-  mutations: {},
-  actions: {},
-  modules: {},
+  mutations: {
+    SET_DOGS(state, payload) {
+      state.dogsBreeds = payload;
+    },
+  },
+  actions: {
+    fetchDogsBreeds({ commit }, { limit, page, order }) {
+      axios
+        .get(
+          `https://api.thedogapi.com/v1/breeds?limit=${limit}&page=${page}&order=${order}`
+        )
+        .then((res) => {
+          const payload = res.data;
+          console.log("00-----", payload);
+          commit("SET_DOGS", payload);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+  },
+  getters: {
+    bigTitle(state) {
+      return state.title.toUpperCase();
+    },
+  },
 });

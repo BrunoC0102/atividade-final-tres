@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Admin from "../views/Admin.vue";
+import Dogs from "../views/Dogs.vue";
 import Products from "../views/Products.vue";
 
 Vue.use(VueRouter);
@@ -22,9 +22,9 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
-    path: "/admin",
-    name: "Admin",
-    component: Admin,
+    path: "/dogs",
+    name: "Dogs",
+    component: Dogs,
   },
   {
     path: "/products",

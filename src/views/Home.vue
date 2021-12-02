@@ -1,20 +1,21 @@
 <template>
   <v-container fluid>
-    <carousel />
-    <products />
+    <!-- <carousel /> -->
+    <dogs />
   </v-container>
 </template>
 
 <script>
-import Carousel from "../components/Carousel";
-import Products from "./Products";
+// import Carousel from "../components/Carousel";
+
+import Dogs from "./Dogs.vue";
 
 export default {
   name: "Home",
 
   components: {
-    Carousel,
-    Products,
+    Dogs,
   },
+  methods: {},
 };
 </script>

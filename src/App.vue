@@ -32,11 +32,11 @@
             <v-list-item-title>About</v-list-item-title>
           </v-list-item>
 
-          <v-list-item href="/admin">
+          <v-list-item href="/dogs">
             <v-list-item-icon>
-              <v-icon>mdi-file-cog</v-icon>
+              <v-icon>mdi-paw</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Admin</v-list-item-title>
+            <v-list-item-title>Dogs</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -60,7 +60,7 @@ export default {
     return {
       drawer: false,
       group: null,
-      titleText: this.$store.state.title,
+      titleText: this.$store.getters.bigTitle,
     };
   },
   methods: {
