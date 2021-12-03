@@ -103,14 +103,11 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    fetchDogsBreeds({ commit }, { limit, page, order }) {
+    fetchDogsBreeds({ commit }) {
       axios
-        .get(
-          `https://api.thedogapi.com/v1/breeds?limit=${limit}&page=${page}&order=${order}`
-        )
+        .get(`https://api.thedogapi.com/v1/breeds`)
         .then((res) => {
           const payload = res.data;
-          console.log("00-----", payload);
           commit("SET_DOGS", payload);
         })
         .catch((error) => {
