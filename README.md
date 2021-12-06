@@ -1,4 +1,4 @@
-# atividade-final-dois
+# Atividade Final 3
 
 ### Autor
 
@@ -6,18 +6,8 @@
 
 ### Imagens da aplicação
 
-- Tela inicial com slide e toolbar
-  ![Home Screen](/imgs/home1.PNG?raw=true "Optional Title")
-
----
-
-- Tela inicial apresentando os produtos
-  ![Home Screen](/imgs/home2.PNG?raw=true "Optional Title")
-
----
-
-- Tela de produtos com a navegação aberta
-  ![Home Screen](/imgs/products-nav-bar.PNG?raw=true "Optional Title")
+- Tela inicial
+  ![Home Screen](/imgs/af3/home.PNG?raw=true "Optional Title")
 
 ## Project setup
 

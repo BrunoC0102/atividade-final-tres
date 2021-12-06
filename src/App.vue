@@ -2,7 +2,7 @@
   <v-app id="app">
     <ToolBar
       :openDrawer="openDrawer"
-      v-bind:title="'Atividade final 2 - ' + titleText"
+      v-bind:title="'Atividade final 3 - ' + titleText"
     />
 
     <v-navigation-drawer v-model="drawer" fixed temporary>

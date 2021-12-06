@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    title: "af2",
+    title: "af3",
     products: [
       {
         id: 1,

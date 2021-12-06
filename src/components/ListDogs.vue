@@ -21,7 +21,6 @@ import CardDogs from "./CardDogs.vue";
 export default {
   name: "ListDogs",
   components: { CardDogs },
-  data() {},
   computed: {
     listDogs() {
       return this.$store.state.dogsBreeds;
